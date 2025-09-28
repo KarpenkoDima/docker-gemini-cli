@@ -1,0 +1,35 @@
+ИНСТРУКЦИЯ ПО ЗАПУСКУ
+------------------------
+
+Закройте все активные контейнеры (если есть).
+
+Откройте PowerShell.
+
+Перейдите в директорию, которую вы хотите смонтировать:
+
+PowerShell
+
+cd J:\Video\
+Запустите Docker команду, используя ${PWD}:
+
+PowerShell
+
+docker run -it --rm -v "${PWD}:/app" -e GEMINI_API_KEY="API-KEY" gemini-cli-env
+После запуска, внутри контейнера снова сделайте ls -la /app. Здесь вы должны увидеть свои файлы.
+-------------------------------------------------------------------------
+
+GOOGLE API KEY = API-KEY
+# Предполагая, что вы находитесь в /home/youruser/MyProject в WSL
+WSL
+docker run -it --rm -v "$(pwd):/app" -e GEMINI_API_KEY="GOOGLE-API-KEY" gemini-cli-env
+
+WINDOWS 
+#docker run -it --rm -v "C:\Users\YourUser\MyProject":/app -e GOOGLE_API_KEY="API-KEY" gemini-cli-env
+
+docker run -it --rm -v "/mnt/j/Video/git-repo/sopb/TOR_SSH":/app -e GOOGLE_API_KEY="API-KE"  --env-file ./.env gemini-cli-env
+
+docker run -it --rm -v "/mnt/j/Video/git-repo/sopb/TOR_SSH":/app --env-file "C:\Users\Dima\AppData\Roaming\Claude\DockerForMCP\node_gemini_cli\gemini\.env" gemini-cli-env
+
+или
+
+docker run -it --rm -v "J:\Video\git-repo\sopb\TOR_SSH":/app -e GEMINI_API_KEY="API-KEY" gemini-cli-env
