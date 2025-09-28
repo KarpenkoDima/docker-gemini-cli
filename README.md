@@ -3,35 +3,8 @@
 
 Dockerfile
 
-```bash
+```cmd
 
-# Используем официальный образ Node.js (рекомендуется LTS версия)
-#FROM node:18-alpine
-
-# Устанавливаем Gemini CLI глобально в контейнере
-#RUN npm install -g @google/gemini-cli
-
-# Создаём рабочую директорию внутри контейнера
-#WORKDIR /app
-
-# Устанавливаем точку входа по умолчанию (чтобы просто получить bash-шелл при запуске)
-#CMD ["bash"]
-
-# Используем официальный образ Node.js (рекомендуется LTS версия)
-#FROM node:18-alpine
-
-# Устанавливаем bash (Alpine Linux использует sh по умолчанию)
-#RUN apk add --no-cache bash
-
-# Устанавливаем Gemini CLI глобально в контейнере
-#RUN npm install -g @google/gemini-cli
-
-# Создаём рабочую директорию внутри контейнера
-#WORKDIR /app
-
-# Устанавливаем bash как ENTRYPOINT
-#ENTRYPOINT ["/bin/bash"]
-#CMD []
 
 # Use official Node.js LTS version with File API support
 FROM node:22-alpine
