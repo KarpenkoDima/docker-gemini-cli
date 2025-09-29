@@ -22,6 +22,13 @@ WORKDIR /app
 ENTRYPOINT ["/bin/bash"]
 
 ```
+Создаем docker image:
+
+```cmd
+
+docker build -t gemini-cli-env .
+
+```
 **Для работы нужен GEMINI-API-KEY**
 
 Закройте все активные контейнеры (если есть).
