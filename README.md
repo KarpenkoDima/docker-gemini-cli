@@ -43,3 +43,11 @@ docker run -it --rm -v "${PWD}:/app" -e GEMINI_API_KEY="API-KEY" gemini-cli-env
 
 ```
 ### После запуска, внутри контейнера снова сделайте ls -la /app. Здесь вы должны увидеть свои файлы.
+
+если хотим сохранять контекст между чатами
+
+```PowerShell
+
+docker run -it --rm -v "${PWD}:/app" -v "${PWD}/.gemini_history:/root/.gemini" -e GEMINI_API_KEY="GEMINI-API-KEY" gemini-cli-env
+
+```
